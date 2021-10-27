@@ -962,6 +962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   light: {fileID: 350651027}
+  flashlight: {fileID: 0}
 --- !u!1001 &189591878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3326,6 +3327,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95cab3b6e4272b44b8c33906ae3b0bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - name: FlashlightOn
+    clip: {fileID: 8300000, guid: bccea03d365679848aa2c1514ffd6ec2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: FlashlightOff
+    clip: {fileID: 8300000, guid: fac8a6eb8d7e18f4ba4a63cd3df1ad87, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1001 &655352288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5031,7 +5045,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
