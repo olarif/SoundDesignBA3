@@ -12,8 +12,12 @@ public class Sound
     public float volume;
     [Range(.1f, 3f)]
     public float pitch;
+    [Range(-1f, 1f)]
+    public float panStereo;
 
     public bool loop;
+
+    
 
     [HideInInspector]
     public AudioSource source;

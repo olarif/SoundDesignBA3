@@ -5,12 +5,12 @@ using UnityEngine;
 public class Flashlight : MonoBehaviour
 {
     [SerializeField] new GameObject light;
-    public AudioClip flashlight;
-    private bool flashActive = false;
+    private bool flashActive = true;
 
     void Start()
     {
-        light.gameObject.SetActive(false);
+        FindObjectOfType<AudioManager>().PlaySound("FlashlightOn");
+        //light.gameObject.SetActive(false);
     }
 
     void Update()
