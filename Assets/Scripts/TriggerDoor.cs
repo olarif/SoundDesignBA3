@@ -24,6 +24,7 @@ public class TriggerDoor : MonoBehaviour
                 myDoor.Play("DoorClose", 0, 0.0f);
                 gameObject.SetActive(false);
                 FindObjectOfType<AudioManager>().PlaySound("DoorClose");
+                FindObjectOfType<HouseManager>().MuteOutside();
             }
         }
     }

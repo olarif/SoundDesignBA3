@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bdab3550ee0834f92cc7fcc98c0570, type: 3}
+  m_Name: footstepSnd_wood
+  m_EditorClassIdentifier: 
+  soundName: footsteps_wood
+  sounds:
+  - {fileID: 8300000, guid: 1122b22c9025ffb40b770b6a175e8587, type: 3}
+  - {fileID: 8300000, guid: c4338b0a96e516645aae5a396027657c, type: 3}
+  - {fileID: 8300000, guid: 07ca0d19c4aa9e64c9fe4ec5b8f4d38e, type: 3}
+  - {fileID: 8300000, guid: 3977e61fa563f3c49a700bcf8b724cce, type: 3}
+  - {fileID: 8300000, guid: 435c3b25640f07443b8c6c27bf73484a, type: 3}
+  - {fileID: 8300000, guid: d33834c89a622334195b6c68ef0ae35a, type: 3}
+  - {fileID: 8300000, guid: f75cce01580e76244bdb5c0188c0b06e, type: 3}
+  - {fileID: 8300000, guid: aa994db8a06c7844d892d0111c6a0c7c, type: 3}

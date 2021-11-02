@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - footsteps_concrete
+  - footsteps_grass
+  - footsteps_wood
   layers:
   - Default
   - TransparentFX

@@ -10,7 +10,7 @@ public class FlashlightTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Invoke("SetActive", 1.5f);
+            Invoke("SetActive", 2.5f);
             
         }
     }

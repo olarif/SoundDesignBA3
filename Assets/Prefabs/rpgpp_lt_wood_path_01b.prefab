@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4099302949826888253}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: footsteps_concrete
+  m_TagString: footsteps_wood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
