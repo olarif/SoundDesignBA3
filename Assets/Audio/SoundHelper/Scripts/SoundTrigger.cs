@@ -7,7 +7,8 @@ using UnityEngine;
 public class SoundTrigger : MonoBehaviour
 {
     [SerializeField] private AudioSource soundSource;
-    [SerializeField] private bool hasPlayed;
+    private bool hasPlayed = false;
+    public bool loop = false;
 
     private BoxCollider _boxCollider;
 
@@ -15,12 +16,29 @@ public class SoundTrigger : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
 
+        if (!hasPlayed)
+        {
+            if (soundSource != null)
+            {
+                soundSource.Play();
+
+                if (loop)
+                {
+                    hasPlayed = false;
+                } else
+                {
+                    hasPlayed = true;
+                }
+            }
+                
+
+        }
+
         //Don't play sound if it has already played.
         if (hasPlayed)
             return;
 
-        if (soundSource != null)
-            soundSource.Play();
+        
     }
 
     private void OnDrawGizmosSelected()

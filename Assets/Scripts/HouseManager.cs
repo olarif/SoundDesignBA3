@@ -8,25 +8,18 @@ public class HouseManager : MonoBehaviour
 
     public AudioMixer mixer;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
-    public void MuteOutside()
+    public void GoInside()
     {
         mixer.SetFloat("OutsideVolume", -80f);
+        mixer.SetFloat("HouseVolume", -15f);
     }
 
-    public void UnmuteOutside()
+    public void Goutside()
     {
-        mixer.SetFloat("OutsideVolume", -30f);
+        mixer.SetFloat("OutsideVolume", 0f);
+        mixer.SetFloat("HouseVolume", -80f);
     }
+
     public void MuteAll()
     {
         mixer.SetFloat("MasterVolume", -80f);

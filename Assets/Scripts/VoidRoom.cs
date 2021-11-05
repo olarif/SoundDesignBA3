@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class VoidRoom : MonoBehaviour
 {
+    public PlayableDirector playable;
     public GameObject panel;
     private bool isActive;
 
@@ -15,6 +17,8 @@ public class VoidRoom : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        playable.Play();
+
         if (!isActive)
         {
             FindObjectOfType<HouseManager>().MuteAll();
