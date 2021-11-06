@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
 
+    public bool canMove = true;
+
     private void Awake()
     {
         instance = this;
@@ -29,9 +31,12 @@ public class PlayerController : MonoBehaviour
     }
     
     void Update()
-    {  
-        MouseLook();
-        MovePlayer();
+    {
+        if (canMove)
+        {
+            MouseLook();
+            MovePlayer();
+        }
     }
 
     public void MovePlayer()
