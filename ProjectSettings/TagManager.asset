@@ -8,6 +8,7 @@ TagManager:
   - footsteps_grass
   - footsteps_wood
   - footstep_wood
+  - footsteps_carpet
   layers:
   - Default
   - TransparentFX

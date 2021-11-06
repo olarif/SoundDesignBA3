@@ -21,24 +21,18 @@ public class VoidRoom : MonoBehaviour
 
         if (!isActive)
         {
-            FindObjectOfType<HouseManager>().MuteAll();
+            FindObjectOfType<HouseManager>().VoidMute();
             panel.SetActive(true);
             isActive = true;
             Invoke("Reactivate", 5f);
         }
-
-        //Invoke("Growl", 5f);
     }
 
     public void OnTriggerExit(Collider other)
     {
-        FindObjectOfType<HouseManager>().UnmuteAll();
+        playable.Stop();
+        FindObjectOfType<HouseManager>().VoidUnmute();
         isActive = false;
-    }
-
-    void Growl()
-    {
-        FindObjectOfType<AudioManager>().PlaySound("Growl");
     }
 
     void Reactivate()

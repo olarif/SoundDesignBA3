@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class TriggerDoor : MonoBehaviour
 {
+
     [SerializeField] private Animator myDoor = null;
     [SerializeField] private bool openTrigger = false;
     [SerializeField] private bool closeTrigger = false;
+    [SerializeField] private bool leaveTrigger = false;
 
 
     private void OnTriggerEnter(Collider other)
@@ -25,7 +28,9 @@ public class TriggerDoor : MonoBehaviour
                 gameObject.SetActive(false);
                 FindObjectOfType<AudioManager>().PlaySound("DoorClose");
                 FindObjectOfType<HouseManager>().GoInside();
-
+            } else if (leaveTrigger)
+            {
+                FindObjectOfType<HouseManager>().GoOutside();
             }
         }
     }
