@@ -5,14 +5,15 @@ using UnityEngine.Events;
 
 public class EventTrigger : MonoBehaviour
 {
-    public UnityEvent m_MyEvent;
+    public UnityEvent entryEvent;
+    public UnityEvent exitEvent;
     private bool hasPlayed = false;
     public bool loop = false;
 
     void Start()
     {
-        if (m_MyEvent == null)
-            m_MyEvent = new UnityEvent();
+        if (entryEvent == null)
+            entryEvent = new UnityEvent();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,7 +21,7 @@ public class EventTrigger : MonoBehaviour
         if (!hasPlayed)
         {
             if (!other.CompareTag("Player")) return;
-            m_MyEvent.Invoke();
+            entryEvent.Invoke();
 
             if (loop)
             {
@@ -31,7 +32,23 @@ public class EventTrigger : MonoBehaviour
                 hasPlayed = true;
             }
         }
+    }
 
-        
+    private void OnTriggerExit(Collider other)
+    {
+        if (!hasPlayed)
+        {
+            if (!other.CompareTag("Player")) return;
+            exitEvent.Invoke();
+
+            if (loop)
+            {
+                hasPlayed = false;
+            }
+            else
+            {
+                hasPlayed = true;
+            }
+        }
     }
 }
