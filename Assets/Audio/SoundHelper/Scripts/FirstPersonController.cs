@@ -65,6 +65,8 @@ public class FirstPersonController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        Physics.SyncTransforms();
+
         RotateView();
         // the jump state needs to read here to make sure it is not missed
         if (!m_Jump)
@@ -99,6 +101,7 @@ public class FirstPersonController : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         float speed;
         GetInput(out speed);
         // always move along the camera forward as it is the direction that it being aimed at

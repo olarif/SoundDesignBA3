@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public GameObject player;
+    public GameObject teleport;
+
 
     private void Awake()
     {
@@ -23,5 +26,10 @@ public class GameManager : MonoBehaviour
         {
             Application.Quit();
         }
+    }
+
+    public void TeleportPlayer()
+    {
+        player.transform.position = new Vector3(-23f, 1.6f, 8.5f);
     }
 }
